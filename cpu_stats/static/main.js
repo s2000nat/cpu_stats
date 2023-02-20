@@ -1,50 +1,3 @@
-//var ctx = document.getElementById('myChart').getContext('2d');
-//
-//var graphData = {
-//    type: 'circe',
-//    data: {
-//        labels: ['Время'],
-//        datasets: [{
-//            label: '# of Votes',
-//            data: [],
-//            backgroundColor: [
-//                'rgba(73, 198, 230, 0.5)',
-//            ],
-//            borderWidth: 1
-//        }]
-//    },
-//    options: {}
-//}
-
-//var myChart = new Chart(ctx, graphData);
-//const socket =  new WebSocket('ws://localhost:8000/ws-url/');
-//
-//    socket.onmessage = function(event){
-//        var djData = JSON.parse(event.data);
-//        console.log(graphData);
-//        var newGraphData = graphData.data.datasets[0].data;
-//        newGraphData.shift();
-//        newGraphData.push(djData.message);
-//        graphData.data.datasets[0].data = newGraphData;
-//        myChart.update();
-//    }
-
-
-
-
-// вариант вывода цифр
-
-
-
-//    socket.onmessage = function(event){
-//            var data = JSON.parse(event.data);
-//            console.log(data);
-//            document.querySelector('#app').innerText = data.message;
-//
-//        }
-
-// вариант с графиком номер 2
-
 ws = new WebSocket('ws://localhost:8000/ws-url/')
     var request_data_interval
     ws.onopen = function()
@@ -62,12 +15,10 @@ ws = new WebSocket('ws://localhost:8000/ws-url/')
 
         data = JSON.parse(evt.data);
         var my_plot1 = {
-//            x: data.x,
             y: data.y1,
             type: 'scatter',
         };
         var my_plot2 = {
-//            x: data.x,
             y: data.y2,
             type: 'scatter',
         };

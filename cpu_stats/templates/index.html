@@ -4,32 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <title> Статистика вашего процессора </title>
-<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">-->
-<!--    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>-->
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>-->
-
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-
-
-
 </head>
 <body>
     <div class="container">
         <div class="row">
             <div class="col-6 mx-auto mt-5">
-
                 <div style="width: 100px; height: 100px; margin-right: 50%; margin-left: 50%;">Загрузка процессора</div>
                 <div id="cpu-graph" style="width: 900px; height: 300px;"></div>
                 <div style="width: 100px; height: 100px; margin-right: 50%; margin-left: 50%;">Средняя загрузка процессора</div>
                 <div id="avg-graph" style="width: 900px; height: 300px; "></div>
-
             </div>
         </div>
     </div>
-
     <script src="{% static 'main.js' %}"></script>
-
-
 </body>
 </html>
